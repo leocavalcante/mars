@@ -1,5 +1,5 @@
 {
-  "name": "apollo-meteor-react-redux",
+  "name": "mars",
   "private": true,
   "scripts": {
     "start": "meteor run"
