@@ -8,17 +8,4 @@ import { Tracker } from 'meteor/tracker'
 import store from '/imports/redux/store'
 import { setMessages }  from '/imports/redux/actions/set-messages'
 
-// TODO: Replace by proper GraphQL subscribe
-Tracker.autorun(() => {
-  Meteor.subscribe('messages')
-
-  console.log('autorun')
-
-  client.query({query: messagesQuery})
-    .then(result => {
-      store.dispatch(setMessages(result.data.messages))
-    })
-})
-
-
 Meteor.startup(() => render(provider, document.getElementById('root')))

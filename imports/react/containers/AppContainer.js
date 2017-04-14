@@ -1,6 +1,7 @@
 import React from 'react'
 import App from '../components/App'
 import { connect } from 'react-redux'
+import { queryMessages } from '/imports/redux/actions/query-messages'
 
 const props = state => ({
   label: state.label,
@@ -8,10 +9,7 @@ const props = state => ({
 })
 
 const actions = dispatch => ({
-  onClick: event => dispatch({
-    type: 'SET_LABEL',
-    payload: event.timeStamp.toString(),
-  })
+  onClick: event => dispatch(queryMessages())
 })
 
 export default connect(props, actions)(App)
