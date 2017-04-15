@@ -1,3 +1,3 @@
-import Messages from './collections/Messages'
+import Messages from '../collections/Messages'
 
 Meteor.publish('messages', () => Messages.find())
